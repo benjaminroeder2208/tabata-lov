@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-const WORK_DURATION = 10;
-const REST_DURATION = 5;
+const EXERCISE_DURATION = 10;
 const TOTAL_ROUNDS = 8;
 
 const EXERCISES = [
@@ -16,38 +15,27 @@ const EXERCISES = [
   "Squat Jumps",
 ];
 
-const WORK_COLOR = "#f97316";
-const REST_COLOR = "#0ea5e9";
+const RING_COLOR = "#f97316";
 
 export function TabataTimer() {
-  const [phase, setPhase] = useState<"work" | "rest">("work");
-  const [secondsLeft, setSecondsLeft] = useState(WORK_DURATION);
+  const [secondsLeft, setSecondsLeft] = useState(EXERCISE_DURATION);
   const [round, setRound] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSecondsLeft((s) => {
         if (s <= 1) {
-          setPhase((p) => {
-            const next = p === "work" ? "rest" : "work";
-            if (p === "rest") {
-              setRound((r) => (r >= TOTAL_ROUNDS ? 1 : r + 1));
-            }
-            return next;
-          });
-          return phase === "work" ? REST_DURATION : WORK_DURATION;
+          setRound((r) => (r >= TOTAL_ROUNDS ? 1 : r + 1));
+          return EXERCISE_DURATION;
         }
         return s - 1;
       });
     }, 1000);
     return () => clearInterval(interval);
-  }, [phase]);
+  }, []);
 
-  const total = phase === "work" ? WORK_DURATION : REST_DURATION;
-  const progress = secondsLeft / total;
-  const ringColor = phase === "work" ? WORK_COLOR : REST_COLOR;
-  const labelColor = ringColor;
-  const label = phase === "work" ? EXERCISES[(round - 1) % EXERCISES.length].toUpperCase() : "REST";
+  const progress = secondsLeft / EXERCISE_DURATION;
+  const label = EXERCISES[(round - 1) % EXERCISES.length].toUpperCase();
 
   const SIZE = 320;
   const radius = 140;
@@ -56,7 +44,7 @@ export function TabataTimer() {
   return (
     <div className="flex flex-col items-center">
       <motion.div
-        animate={{ scale: secondsLeft === total ? [1, 1.04, 1] : 1 }}
+        animate={{ scale: secondsLeft === EXERCISE_DURATION ? [1, 1.04, 1] : 1 }}
         transition={{ duration: 0.6 }}
         className="relative"
         style={{ width: SIZE, height: SIZE }}
@@ -75,7 +63,7 @@ export function TabataTimer() {
             cy={SIZE / 2}
             r={radius}
             fill="none"
-            stroke={ringColor}
+            stroke={RING_COLOR}
             strokeWidth="6"
             strokeLinecap="butt"
             strokeDasharray={circumference}
@@ -95,7 +83,7 @@ export function TabataTimer() {
           <div
             className="mt-3 font-bold uppercase"
             style={{
-              color: labelColor,
+              color: RING_COLOR,
               fontSize: "0.85rem",
               letterSpacing: "0.08em",
             }}
