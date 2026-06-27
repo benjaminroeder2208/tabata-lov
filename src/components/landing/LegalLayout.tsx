@@ -2,32 +2,31 @@ import type { ReactNode } from "react";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 
-export function LegalLayout({ title, children }: { title: string; children?: ReactNode }) {
+export function LegalLayout({ title, subtitle, children }: { title: string; subtitle?: string; children?: ReactNode }) {
   return (
     <div className="min-h-screen" style={{ background: "var(--bg-base)" }}>
       <Nav />
-      <main className="mx-auto px-6 py-20" style={{ maxWidth: 760, background: "var(--bg-surface)" }}>
+      <main className="mx-auto px-6 py-20" style={{ maxWidth: 760, background: "#0d0d14" }}>
         <h1
-          className="mb-8 text-3xl font-bold md:text-4xl"
-          style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+          style={{
+            color: "#e2e8f0",
+            fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
+            fontWeight: 700,
+            marginBottom: 8,
+            letterSpacing: "-0.02em",
+            lineHeight: 1.1,
+          }}
         >
           {title}
         </h1>
-        <div
-          className="mb-8 border p-4 text-sm"
-          style={{
-            borderColor: "var(--accent-orange)",
-            background: "var(--bg-elevated)",
-            color: "var(--text-primary)",
-            borderRadius: "4px",
-          }}
-        >
-          ⚠️ Dieser Text ist ein Platzhalter. Bitte ersetze ihn mit deinen rechtsgültigen{" "}
-          {title}.
-        </div>
+        {subtitle && (
+          <p style={{ color: "#64748b", fontSize: "0.9rem", marginBottom: 48 }}>
+            {subtitle}
+          </p>
+        )}
         <div
           className="space-y-4 text-base"
-          style={{ color: "var(--text-muted)", lineHeight: 1.7 }}
+          style={{ color: "#94a3b8", lineHeight: 1.8 }}
         >
           {children ?? <p>[Hier kommt der rechtliche Text]</p>}
         </div>
