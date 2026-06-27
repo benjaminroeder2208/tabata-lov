@@ -105,8 +105,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Intervall & Tabata COACH" },
       { name: "twitter:description", content: "Tabata, HIIT und Custom-Intervalle — mit Sprachausgabe, Trainingshistorie und Streak-System. Kostenlos. Auf deinem Smartphone." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a27cfa27-cca1-47ff-91d3-5775da8d9186/id-preview-0d74c863--12e4baa8-9d1a-47b1-b5ef-ce744d3c913d.lovable.app-1782563228956.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a27cfa27-cca1-47ff-91d3-5775da8d9186/id-preview-0d74c863--12e4baa8-9d1a-47b1-b5ef-ce744d3c913d.lovable.app-1782563228956.png" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/QUU4ypNUspS4bYRg7NSwbjMskVm1/social-images/social-1782569479300-Screenshot_2026-06-27_161107.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/QUU4ypNUspS4bYRg7NSwbjMskVm1/social-images/social-1782569479300-Screenshot_2026-06-27_161107.webp" },
     ],
     links: [
       {
