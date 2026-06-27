@@ -90,9 +90,9 @@ function PrimaryButton({ href, children, full }: { href: string; children: React
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center justify-center px-6 py-3 text-sm font-bold transition-colors ${full ? "w-full" : ""}`}
-      style={{ background: "var(--accent-green)", color: "var(--bg-base)", borderRadius: "2px" }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-green-hover)")}
-      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-green)")}
+      style={{ background: "var(--accent-orange)", color: "var(--bg-base)", borderRadius: "2px" }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-orange-hover)")}
+      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-orange)")}
     >
       {children}
     </a>
@@ -332,13 +332,13 @@ function Index() {
             className="flex flex-col p-8"
             style={{
               background: "var(--bg-surface)",
-              border: "1px solid var(--accent-green)",
+              border: "1px solid var(--accent-orange)",
               borderRadius: "4px",
             }}
           >
             <div
               className="inline-block self-start px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.15em]"
-              style={{ color: "var(--accent-green)", border: "1px solid var(--accent-green)", borderRadius: "2px" }}
+              style={{ color: "var(--accent-orange)", border: "1px solid var(--accent-orange)", borderRadius: "2px" }}
             >
               Jetzt verfügbar
             </div>
