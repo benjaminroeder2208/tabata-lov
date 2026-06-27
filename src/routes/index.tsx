@@ -154,7 +154,7 @@ function Index() {
             >
               <span style={{ display: "block" }}>Dein Training.</span>
               <span style={{ display: "block" }}>Dein Tempo.</span>
-              <span style={{ display: "block" }}>HIIT – Tabata – Fertig.</span>
+              <span style={{ display: "block", fontSize: "clamp(1.5rem, 4.5vw, 2.8rem)", marginTop: "0.25em" }}>HIIT – Tabata – Fertig.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
