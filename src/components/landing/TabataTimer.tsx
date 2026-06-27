@@ -69,14 +69,19 @@ export function TabataTimer() {
   const circumference = 2 * Math.PI * radius;
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex w-full flex-col items-center">
       <motion.div
         animate={{ scale: secondsLeft === phaseDuration ? [1, 1.04, 1] : 1 }}
         transition={{ duration: 0.6 }}
-        className="relative"
-        style={{ width: SIZE, height: SIZE }}
+        className="relative w-full"
+        style={{ maxWidth: SIZE, aspectRatio: "1 / 1" }}
       >
-        <svg width={SIZE} height={SIZE} viewBox={`0 0 ${SIZE} ${SIZE}`}>
+        <svg
+          width="100%"
+          height="100%"
+          viewBox={`0 0 ${SIZE} ${SIZE}`}
+          preserveAspectRatio="xMidYMid meet"
+        >
           <circle
             cx={SIZE / 2}
             cy={SIZE / 2}
@@ -100,10 +105,15 @@ export function TabataTimer() {
             transform={`rotate(-90 ${SIZE / 2} ${SIZE / 2})`}
           />
         </svg>
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center">
           <div
-            className="text-7xl font-bold tabular-nums"
-            style={{ color: "var(--text-primary)", letterSpacing: "-0.02em" }}
+            className="font-bold tabular-nums"
+            style={{
+              color: "var(--text-primary)",
+              letterSpacing: "-0.02em",
+              fontSize: "clamp(3.5rem, 16vw, 4.5rem)",
+              lineHeight: 1,
+            }}
           >
             {String(secondsLeft).padStart(2, "0")}
           </div>
@@ -111,7 +121,7 @@ export function TabataTimer() {
             className="mt-3 font-bold uppercase"
             style={{
               color: ringColor,
-              fontSize: "1.1rem",
+              fontSize: "clamp(0.85rem, 3.5vw, 1.1rem)",
               letterSpacing: "0.08em",
             }}
           >
@@ -120,11 +130,15 @@ export function TabataTimer() {
         </div>
       </motion.div>
       <div
-        className="mt-6 text-base uppercase tracking-[0.12em]"
-        style={{ color: "var(--text-muted)" }}
+        className="mt-6 uppercase tracking-[0.12em]"
+        style={{
+          color: "var(--text-muted)",
+          fontSize: "clamp(0.85rem, 3vw, 1rem)",
+        }}
       >
         Runde {round} / {TOTAL_ROUNDS}
       </div>
     </div>
   );
 }
+
