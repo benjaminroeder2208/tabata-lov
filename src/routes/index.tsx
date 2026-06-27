@@ -152,7 +152,9 @@ function Index() {
                 lineHeight: 1.05,
               }}
             >
-              Intervall-Training.<br />Kein Schnickschnack.
+              <span style={{ display: "block" }}>Dein Training.</span>
+              <span style={{ display: "block" }}>Dein Tempo.</span>
+              <span style={{ display: "block" }}>HIIT – Tabata – Fertig.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
