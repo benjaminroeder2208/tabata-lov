@@ -72,6 +72,23 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const BASE_URL = "https://intervallcoach.de";
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Intervall & Tabata Coach",
+  url: BASE_URL,
+  email: "hello@intervallcoach.de",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Intervall & Tabata Coach",
+  url: BASE_URL,
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -90,6 +107,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(organizationJsonLd),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(websiteJsonLd),
       },
     ],
   }),
