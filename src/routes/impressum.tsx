@@ -5,7 +5,7 @@ export const Route = createFileRoute("/impressum")({
   head: () => ({
     meta: [
       { title: "Impressum — Intervall & Tabata Coach" },
-      { name: "description", content: "Impressum von Intervall & Tabata Coach." },
+      { name: "description", content: "Impressum von Intervall & Tabata Coach. Rechtliche Angaben gemäß § 5 DDG und Kontaktdaten." },
       { property: "og:title", content: "Impressum — Intervall & Tabata Coach" },
       { property: "og:description", content: "Impressum von Intervall & Tabata Coach." },
       { property: "og:url", content: "https://intervallcoach.de/impressum" },
