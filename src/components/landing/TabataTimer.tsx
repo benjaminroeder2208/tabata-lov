@@ -31,9 +31,9 @@ export function TabataTimer() {
 
   const total = phase === "work" ? WORK_DURATION : REST_DURATION;
   const progress = secondsLeft / total;
-  const color = "var(--accent-green)";
+  const color = "var(--accent-orange)";
   const label = phase === "work" ? "WORK" : "REST";
-  const labelColor = phase === "work" ? "var(--accent-green)" : "var(--accent-blue)";
+  const labelColor = phase === "work" ? "var(--accent-orange)" : "var(--accent-blue)";
 
   const radius = 130;
   const circumference = 2 * Math.PI * radius;
