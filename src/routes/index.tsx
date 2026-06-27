@@ -349,7 +349,7 @@ function Index() {
               {["Alle Timer-Features", "Trainingshistorie", "Streaks & Badges", "Cloud-Sync", "PWA (installierbar)", "YouTube-Integration"].map(
                 (item) => (
                   <li key={item} className="flex items-start gap-2" style={{ color: "var(--text-primary)" }}>
-                    <Check size={16} style={{ color: "var(--accent-green)" }} className="mt-1 flex-shrink-0" />
+                    <Check size={16} style={{ color: "var(--accent-orange)" }} className="mt-1 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
                 )
