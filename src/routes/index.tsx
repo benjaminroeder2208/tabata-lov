@@ -371,7 +371,6 @@ function Index() {
               background: "var(--bg-surface)",
               border: "1px solid var(--accent-purple)",
               borderRadius: "4px",
-              opacity: 0.95,
             }}
           >
             <div
