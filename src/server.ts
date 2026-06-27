@@ -40,6 +40,16 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
     try {
+      const url = new URL(request.url);
+      if (url.hostname === "www.intervallcoach.de") {
+        return new Response(null, {
+          status: 301,
+          headers: {
+            location: `https://intervallcoach.de${url.pathname}${url.search}`,
+          },
+        });
+      }
+
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
       return await normalizeCatastrophicSsrResponse(response);
