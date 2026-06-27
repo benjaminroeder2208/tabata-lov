@@ -94,14 +94,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Intervall & Tabata COACH" },
+      { name: "description", content: "Tabata, HIIT und Custom-Intervalle — mit Sprachausgabe, Trainingshistorie und Streak-System. Kostenlos. Auf deinem Smartphone." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Intervall & Tabata COACH" },
+      { property: "og:description", content: "Tabata, HIIT und Custom-Intervalle — mit Sprachausgabe, Trainingshistorie und Streak-System. Kostenlos. Auf deinem Smartphone." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Intervall & Tabata COACH" },
+      { name: "twitter:description", content: "Tabata, HIIT und Custom-Intervalle — mit Sprachausgabe, Trainingshistorie und Streak-System. Kostenlos. Auf deinem Smartphone." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a27cfa27-cca1-47ff-91d3-5775da8d9186/id-preview-0d74c863--12e4baa8-9d1a-47b1-b5ef-ce744d3c913d.lovable.app-1782563228956.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a27cfa27-cca1-47ff-91d3-5775da8d9186/id-preview-0d74c863--12e4baa8-9d1a-47b1-b5ef-ce744d3c913d.lovable.app-1782563228956.png" },
     ],
     links: [
       {
