@@ -371,21 +371,20 @@ function Index() {
               background: "var(--bg-surface)",
               border: "1px solid var(--accent-purple)",
               borderRadius: "4px",
-              opacity: 0.95,
             }}
           >
             <div
               className="inline-block self-start px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.15em]"
-              style={{ color: "var(--accent-purple)", border: "1px solid var(--accent-purple)", borderRadius: "2px", opacity: 0.8 }}
+              style={{ color: "var(--accent-purple)", border: "1px solid var(--accent-purple)", borderRadius: "2px" }}
             >
               Demnächst
             </div>
             <h3 className="mt-6 text-xl font-bold" style={{ color: "var(--text-primary)" }}>Pro</h3>
-            <div className="mt-4 text-5xl font-bold" style={{ color: "var(--text-muted)" }}>Demnächst</div>
+            <div className="mt-4 text-5xl font-bold" style={{ color: "var(--text-primary)" }}>Demnächst</div>
             <div className="mt-2 text-sm" style={{ color: "var(--text-muted)" }}>Für ernsthafte Athleten</div>
-            <ul className="mt-6 flex-1 space-y-3 text-sm" style={{ opacity: 0.85 }}>
+            <ul className="mt-6 flex-1 space-y-3 text-sm">
               {["Erweiterte Statistiken", "KI-basierte Trainingspläne", "Prioritäts-Support", "Weitere Features in Planung"].map((item) => (
-                <li key={item} className="flex items-start gap-2" style={{ color: "var(--text-muted)" }}>
+                <li key={item} className="flex items-start gap-2" style={{ color: "var(--text-primary)" }}>
                   <span style={{ color: "var(--accent-purple)" }} className="mt-0.5">+</span>
                   <span>{item}</span>
                 </li>
