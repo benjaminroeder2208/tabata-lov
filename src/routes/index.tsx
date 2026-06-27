@@ -265,9 +265,8 @@ function Index() {
           {steps.map((step, i) => {
             const Icon = step.icon;
             return (
-              <>
+              <Fragment key={step.name}>
                 <motion.div
-                  key={step.name}
                   initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
@@ -289,14 +288,13 @@ function Index() {
                 </motion.div>
                 {i < steps.length - 1 && (
                   <div
-                    key={`arrow-${i}`}
                     className="flex items-center justify-center"
                     style={{ color: "var(--accent-orange)" }}
                   >
                     <ChevronRight size={32} className="rotate-90 md:rotate-0" />
                   </div>
                 )}
-              </>
+              </Fragment>
             );
           })}
         </div>
