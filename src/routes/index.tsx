@@ -50,13 +50,13 @@ const APP_URL = "https://app.intervallcoach.de";
 
 const features = [
   { icon: Timer, color: "var(--accent-orange)", name: "Tabata & Intervall Timer", desc: "Frei konfigurierbare Workouts — Rundenanzahl, Arbeits- und Pausenzeit bis auf die Sekunde." },
-  { icon: Volume2, color: "var(--accent-green)", name: "Deutsche Sprachausgabe", desc: "Die App zählt auf Deutsch an, kündigt Phasen an und motiviert — kein Blick aufs Display nötig." },
-  { icon: History, color: "var(--accent-blue)", name: "Trainingshistorie", desc: "7-Tage-Übersicht deiner Workouts. Sieh auf einen Blick, wann du zuletzt trainiert hast." },
+  { icon: Volume2, color: "var(--accent-orange)", name: "Deutsche Sprachausgabe", desc: "Die App zählt auf Deutsch an, kündigt Phasen an und motiviert — kein Blick aufs Display nötig." },
+  { icon: History, color: "var(--accent-orange)", name: "Trainingshistorie", desc: "7-Tage-Übersicht deiner Workouts. Sieh auf einen Blick, wann du zuletzt trainiert hast." },
   { icon: Flame, color: "var(--accent-orange)", name: "Streaks & Badges", desc: "10 freischaltbare Badges und ein Streak-System — bleib dran und werde belohnt." },
-  { icon: Cloud, color: "var(--accent-blue)", name: "Cloud-Sync", desc: "Deine Workouts auf allen Geräten. Trainiere zuhause, melde dich unterwegs an — alles da." },
-  { icon: Smartphone, color: "var(--accent-purple)", name: "PWA — Wie eine native App", desc: "Installierbar auf iOS und Android. Läuft wie eine App, braucht keinen App Store." },
-  { icon: Users, color: "var(--accent-green)", name: "Eigener Account", desc: "Jeder Nutzer hat seinen eigenen sicheren Account mit persönlichen Workouts und Daten." },
-  { icon: Download, color: "var(--accent-purple)", name: "Export & Import", desc: "Exportiere deine Trainingsdaten. Volle Kontrolle über deine eigenen Daten." },
+  { icon: Cloud, color: "var(--accent-orange)", name: "Cloud-Sync", desc: "Deine Workouts auf allen Geräten. Trainiere zuhause, melde dich unterwegs an — alles da." },
+  { icon: Smartphone, color: "var(--accent-orange)", name: "PWA — Wie eine native App", desc: "Installierbar auf iOS und Android. Läuft wie eine App, braucht keinen App Store." },
+  { icon: Users, color: "var(--accent-orange)", name: "Eigener Account", desc: "Jeder Nutzer hat seinen eigenen sicheren Account mit persönlichen Workouts und Daten." },
+  { icon: Download, color: "var(--accent-orange)", name: "Export & Import", desc: "Exportiere deine Trainingsdaten. Volle Kontrolle über deine eigenen Daten." },
   { icon: Youtube, color: "var(--accent-orange)", name: "YouTube-Integration", desc: "Lege Musik im Hintergrund auf — der Timer läuft, YouTube spielt." },
 ];
 
@@ -90,9 +90,9 @@ function PrimaryButton({ href, children, full }: { href: string; children: React
       target="_blank"
       rel="noopener noreferrer"
       className={`inline-flex items-center justify-center px-6 py-3 text-sm font-bold transition-colors ${full ? "w-full" : ""}`}
-      style={{ background: "var(--accent-orange)", color: "var(--bg-base)", borderRadius: "2px" }}
-      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-orange-hover)")}
-      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-orange)")}
+      style={{ background: "var(--accent-green)", color: "var(--bg-base)", borderRadius: "2px" }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-green-hover)")}
+      onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-green)")}
     >
       {children}
     </a>
@@ -369,13 +369,13 @@ function Index() {
             className="flex flex-col p-8"
             style={{
               background: "var(--bg-surface)",
-              border: "1px solid var(--accent-purple)",
+              border: "1px solid #ffffff",
               borderRadius: "4px",
             }}
           >
             <div
               className="inline-block self-start px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.15em]"
-              style={{ color: "var(--accent-purple)", border: "1px solid var(--accent-purple)", borderRadius: "2px" }}
+              style={{ color: "#ffffff", border: "1px solid #ffffff", borderRadius: "2px" }}
             >
               Demnächst
             </div>
@@ -385,7 +385,7 @@ function Index() {
             <ul className="mt-6 flex-1 space-y-3 text-sm">
               {["Erweiterte Statistiken", "KI-basierte Trainingspläne", "Prioritäts-Support", "Weitere Features in Planung"].map((item) => (
                 <li key={item} className="flex items-start gap-2" style={{ color: "var(--text-primary)" }}>
-                  <span style={{ color: "var(--accent-purple)" }} className="mt-0.5">+</span>
+                  <span style={{ color: "#ffffff" }} className="mt-0.5">+</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -393,8 +393,8 @@ function Index() {
             <div className="mt-8">
               <GhostButton
                 href="mailto:hello@intervallcoach.de?subject=Pro%20Update"
-                borderColor="var(--accent-purple)"
-                textColor="var(--accent-purple)"
+                borderColor="#ffffff"
+                textColor="#ffffff"
                 full
               >
                 Benachrichtige mich
