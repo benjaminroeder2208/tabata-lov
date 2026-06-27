@@ -186,7 +186,7 @@ function Index() {
               <span>✓ Läuft offline</span>
             </motion.div>
           </div>
-          <div className="hidden md:col-span-2 md:flex md:justify-center">
+          <div className="flex justify-center md:col-span-2">
             <TabataTimer />
           </div>
         </div>
