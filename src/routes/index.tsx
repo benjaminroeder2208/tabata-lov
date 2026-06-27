@@ -27,7 +27,7 @@ import { TabataTimer } from "@/components/landing/TabataTimer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Intervall & Tabata Coach — Trainings-App für HIIT und Tabata" },
+      { title: "Intervall & Tabata Coach — HIIT Training App" },
       {
         name: "description",
         content:
