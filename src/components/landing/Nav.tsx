@@ -20,7 +20,8 @@ export function Nav() {
             href="https://app.intervallcoach.de"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-xs font-bold transition-colors md:text-sm"
+            aria-label="Login — Intervall & Tabata Coach App (öffnet in neuem Tab)"
+            className="px-4 py-2 text-xs font-bold transition-colors hover:text-[var(--accent-orange)] focus-visible:text-[var(--accent-orange)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-orange)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-base)] md:text-sm"
             style={{
               background: "transparent",
               color: "var(--text-primary)",
@@ -29,11 +30,9 @@ export function Nav() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.borderColor = "var(--accent-orange)";
-              e.currentTarget.style.color = "var(--accent-orange)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.borderColor = "var(--border-default)";
-              e.currentTarget.style.color = "var(--text-primary)";
             }}
           >
             Login
@@ -42,7 +41,8 @@ export function Nav() {
             href="https://app.intervallcoach.de"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 text-xs font-bold transition-colors md:text-sm"
+            aria-label="Kostenlos starten — Intervall & Tabata Coach App (öffnet in neuem Tab)"
+            className="px-4 py-2 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--text-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-base)] md:text-sm"
             style={{
               background: "var(--accent-orange)",
               color: "var(--bg-base)",
