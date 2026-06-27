@@ -20,13 +20,13 @@ export function Footer() {
           </p>
         </div>
         <div className="flex flex-col gap-2 text-sm">
-          <Link to="/agb" style={{ color: "var(--text-primary)" }} className="hover:opacity-70">
+          <Link to="/agb" style={{ color: "var(--text-primary)" }} className="transition-colors hover:text-[var(--accent-orange)]">
             AGB
           </Link>
-          <Link to="/datenschutz" style={{ color: "var(--text-primary)" }} className="hover:opacity-70">
+          <Link to="/datenschutz" style={{ color: "var(--text-primary)" }} className="transition-colors hover:text-[var(--accent-orange)]">
             Datenschutz
           </Link>
-          <Link to="/impressum" style={{ color: "var(--text-primary)" }} className="hover:opacity-70">
+          <Link to="/impressum" style={{ color: "var(--text-primary)" }} className="transition-colors hover:text-[var(--accent-orange)]">
             Impressum
           </Link>
         </div>
