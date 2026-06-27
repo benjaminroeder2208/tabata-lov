@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 const WORK_DURATION = 10;
 const REST_DURATION = 5;
-const TOTAL_ROUNDS = 8;
+const TOTAL_ROUNDS = 4;
 
 const EXERCISES = [
   "Burpees",
@@ -16,13 +16,18 @@ const EXERCISES = [
   "Squat Jumps",
 ];
 
+const EXERCISES_PER_ROUND = EXERCISES.length;
+const TOTAL_EXERCISES = TOTAL_ROUNDS * EXERCISES_PER_ROUND;
+
 const WORK_COLOR = "#f97316";
 const REST_COLOR = "#0ea5e9";
 
 export function TabataTimer() {
   const [phase, setPhase] = useState<"work" | "rest">("work");
   const [secondsLeft, setSecondsLeft] = useState(WORK_DURATION);
-  const [round, setRound] = useState(1);
+  const [exerciseIndex, setExerciseIndex] = useState(0);
+
+  const round = Math.floor(exerciseIndex / EXERCISES_PER_ROUND) + 1;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,11 +37,11 @@ export function TabataTimer() {
             if (currentPhase === "work") {
               return "rest";
             } else {
-              setRound((r) => (r >= TOTAL_ROUNDS ? 1 : r + 1));
+              setExerciseIndex((idx) => (idx + 1) % TOTAL_EXERCISES);
               return "work";
             }
           });
-          return -1; // signal transition, handled below
+          return -1;
         }
         return s - 1;
       });
@@ -44,7 +49,6 @@ export function TabataTimer() {
     return () => clearInterval(interval);
   }, []);
 
-  // When secondsLeft hits -1 (transition signal), reset to new phase duration
   useEffect(() => {
     if (secondsLeft === -1) {
       setSecondsLeft(phase === "work" ? WORK_DURATION : REST_DURATION);
@@ -57,7 +61,7 @@ export function TabataTimer() {
 
   const label =
     phase === "work"
-      ? EXERCISES[(round - 1) % EXERCISES.length].toUpperCase()
+      ? EXERCISES[exerciseIndex % EXERCISES_PER_ROUND].toUpperCase()
       : "REST";
 
   const SIZE = 320;
@@ -107,7 +111,7 @@ export function TabataTimer() {
             className="mt-3 font-bold uppercase"
             style={{
               color: ringColor,
-              fontSize: "0.85rem",
+              fontSize: "1.1rem",
               letterSpacing: "0.08em",
             }}
           >
@@ -116,7 +120,7 @@ export function TabataTimer() {
         </div>
       </motion.div>
       <div
-        className="mt-6 text-sm uppercase tracking-[0.15em]"
+        className="mt-6 text-base uppercase tracking-[0.12em]"
         style={{ color: "var(--text-muted)" }}
       >
         Runde {round} / {TOTAL_ROUNDS}
