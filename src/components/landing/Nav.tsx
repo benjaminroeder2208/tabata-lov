@@ -21,12 +21,12 @@ export function Nav() {
           rel="noopener noreferrer"
           className="px-4 py-2 text-xs font-bold transition-colors md:text-sm"
           style={{
-            background: "var(--accent-orange)",
+            background: "var(--accent-green)",
             color: "var(--bg-base)",
             borderRadius: "2px",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-orange-hover)")}
-          onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-orange)")}
+          onMouseEnter={(e) => (e.currentTarget.style.background = "var(--accent-green-hover)")}
+          onMouseLeave={(e) => (e.currentTarget.style.background = "var(--accent-green)")}
         >
           Kostenlos starten →
         </a>

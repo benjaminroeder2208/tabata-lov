@@ -31,7 +31,7 @@ export function TabataTimer() {
 
   const total = phase === "work" ? WORK_DURATION : REST_DURATION;
   const progress = secondsLeft / total;
-  const color = phase === "work" ? "var(--accent-orange)" : "var(--accent-blue)";
+  const color = "var(--accent-green)";
   const label = phase === "work" ? "WORK" : "REST";
   const labelColor = phase === "work" ? "var(--accent-green)" : "var(--accent-blue)";
 
