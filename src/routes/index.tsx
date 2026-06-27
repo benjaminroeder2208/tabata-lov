@@ -375,7 +375,7 @@ function Index() {
           >
             <div
               className="inline-block self-start px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.15em]"
-              style={{ color: "var(--accent-purple)", border: "1px solid var(--accent-purple)", borderRadius: "2px", opacity: 0.8 }}
+              style={{ color: "var(--accent-purple)", border: "1px solid var(--accent-purple)", borderRadius: "2px" }}
             >
               Demnächst
             </div>
