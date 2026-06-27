@@ -1,0 +1,12 @@
+# Intervall & Tabata Coach
+
+> Landingpage für Intervall & Tabata Coach — eine PWA für Intervall- und Tabata-Training im DACH-Markt. Nutzer können sich kostenlos registrieren und die App unter app.intervallcoach.de nutzen.
+
+Intervall & Tabata Coach ist eine Progressive Web App für Hochintensitäts-Intervalltraining und Tabata-Workouts. Die Landingpage informiert über Features, Funktionsweise, Preismodelle (Free und Pro) und leitet zur kostenlosen Registrierung auf der App-Plattform weiter. Es werden keine Tracker oder Cookies eingesetzt.
+
+## Pages
+
+- [Startseite](/): Hero mit animiertem Tabata-Timer, Features, Funktionsweise, Preise und Vertrauenssektion. Leitet zur App-Registrierung.
+- [AGB](/agb): Allgemeine Geschäftsbedingungen und Nutzungsbedingungen für Intervall & Tabata Coach.
+- [Datenschutz](/datenschutz): Datenschutzerklärung gemäß DSGVO. Kein Tracking, keine Cookies, keine Weitergabe personenbezogener Daten.
+- [Impressum](/impressum): Angaben gemäß § 5 TMG und Kontaktdaten des Betreibers.
