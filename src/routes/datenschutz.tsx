@@ -26,8 +26,8 @@ export const Route = createFileRoute("/datenschutz")({
       <p>Deutschland</p>
       <p>
         E-Mail:{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>
       </p>
 
@@ -120,8 +120,8 @@ export const Route = createFileRoute("/datenschutz")({
       </h3>
       <p>
         Die Daten werden gespeichert, solange das Nutzerkonto besteht. Nach Löschung des Accounts werden alle personenbezogenen Daten innerhalb von 30 Tagen gelöscht. Eine Löschanfrage kann per E-Mail an{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>{" "}
         gestellt werden.
       </p>
@@ -181,8 +181,8 @@ export const Route = createFileRoute("/datenschutz")({
       </ul>
       <p>
         Zur Ausübung deiner Rechte wende dich bitte an:{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>
       </p>
       <p>

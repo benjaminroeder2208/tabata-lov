@@ -27,8 +27,8 @@ export const Route = createFileRoute("/impressum")({
       </h2>
       <p>
         E-Mail:{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>
       </p>
 
