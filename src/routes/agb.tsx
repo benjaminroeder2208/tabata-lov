@@ -104,8 +104,8 @@ export const Route = createFileRoute("/agb")({
       </h2>
       <p>
         Der Nutzer kann sein Konto jederzeit und ohne Angabe von Gründen löschen lassen. Eine Löschanfrage ist per E-Mail an{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>{" "}
         zu richten. Das Konto und alle zugehörigen Daten werden innerhalb von 30 Tagen gelöscht.
       </p>
@@ -141,8 +141,8 @@ export const Route = createFileRoute("/agb")({
       <p>63075 Offenbach am Main</p>
       <p>
         E-Mail:{" "}
-        <a href="mailto:benjamin@kontakt-2.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
-          benjamin@kontakt-2.de
+        <a href="mailto:info@intervallcoach.de" style={{ color: "var(--accent-orange)", textDecoration: "underline" }}>
+          info@intervallcoach.de
         </a>
       </p>
 
