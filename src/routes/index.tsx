@@ -39,6 +39,7 @@ export const Route = createFileRoute("/")({
         content: "Tabata und HIIT Training App — kostenlos, PWA, auf Deutsch.",
       },
       { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "https://intervallcoach.de" },
     ],
     links: [{ rel: "canonical", href: "https://intervallcoach.de" }],

@@ -9,6 +9,8 @@ export const Route = createFileRoute("/datenschutz")({
       { property: "og:title", content: "Datenschutz — Intervall & Tabata Coach" },
       { property: "og:description", content: "Datenschutzerklärung von Intervall & Tabata Coach." },
       { property: "og:url", content: "https://intervallcoach.de/datenschutz" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://intervallcoach.de/datenschutz" }],
   }),

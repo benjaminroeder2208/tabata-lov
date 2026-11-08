@@ -9,11 +9,16 @@ export function Nav() {
         borderBottom: "1px solid var(--border-default)",
       }}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
-        <Link to="/" className="text-xs font-bold tracking-wider md:text-sm">
+      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4 md:px-8">
+        <Link to="/" className="flex flex-wrap items-center gap-2 text-xs font-bold tracking-wider md:text-sm">
+          <span>
           <span style={{ color: "var(--text-primary)" }}>INTERVALL </span>
           <span style={{ color: "var(--accent-orange)" }}>&amp;</span>
           <span style={{ color: "var(--text-primary)" }}> TABATA COACH</span>
+          </span>
+          <span className="shrink-0 rounded-[2px] border border-accent-orange px-1.5 py-0.5 text-[10px] leading-none tracking-normal text-accent-orange">
+            BETA
+          </span>
         </Link>
         <div className="flex items-center gap-3">
           <a

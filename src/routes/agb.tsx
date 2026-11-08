@@ -9,6 +9,8 @@ export const Route = createFileRoute("/agb")({
       { property: "og:title", content: "AGB — Intervall & Tabata Coach" },
       { property: "og:description", content: "Allgemeine Geschäftsbedingungen von Intervall & Tabata Coach." },
       { property: "og:url", content: "https://intervallcoach.de/agb" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://intervallcoach.de/agb" }],
   }),
