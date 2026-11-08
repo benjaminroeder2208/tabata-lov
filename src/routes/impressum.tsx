@@ -9,6 +9,8 @@ export const Route = createFileRoute("/impressum")({
       { property: "og:title", content: "Impressum — Intervall & Tabata Coach" },
       { property: "og:description", content: "Impressum von Intervall & Tabata Coach." },
       { property: "og:url", content: "https://intervallcoach.de/impressum" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
     ],
     links: [{ rel: "canonical", href: "https://intervallcoach.de/impressum" }],
   }),
